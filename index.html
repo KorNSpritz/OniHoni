@@ -54,6 +54,20 @@
         border-bottom: 4px solid #ffc107;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
+
+      section h3 {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 218, 8, 0.6) 0%,
+          rgb(255, 145, 0) 100%
+        );
+        padding: 0.75rem 1rem;
+
+        border-left: 7px solid #ff9800;
+        border-radius: 0.25rem;
+        font-weight: 700;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+      }
       .logo {
         max-height: 130px;
         border-radius: 50%;
@@ -104,19 +118,6 @@
         border-top: 4px solid #ffc107;
         position: relative;
       }
-      section h3 {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 218, 8, 0.6) 0%,
-          rgb(255, 145, 0) 100%
-        );
-        padding: 0.75rem 1rem;
-
-        border-left: 7px solid #ff9800;
-        border-radius: 0.25rem;
-        font-weight: 700;
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
-      }
       .lang-switch {
         margin-top: 1rem;
         width: 120px;
@@ -137,7 +138,7 @@
           <div class="col-md-4 mb-4">
             <div class="product-card p-3">
               <img
-                src="product.jpg"
+                src="products/product_mini3.jpg"
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
@@ -151,7 +152,7 @@
           <div class="col-md-4 mb-4">
             <div class="product-card p-3">
               <img
-                src="product2.jpg"
+                src="products/product2.jpg"
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
@@ -165,7 +166,35 @@
           <div class="col-md-4 mb-4">
             <div class="product-card p-3">
               <img
-                src="product3.jpg"
+                src="products/product_special.jpg"
+                alt="Honey Jar"
+                class="img-fluid rounded mb-2"
+              />
+              <h5 data-i18n="prod3-title">Creamed Honey</h5>
+              <p data-i18n="prod3-desc">Spreadable, smooth honey delight.</p>
+              <button class="btn btn-success" data-i18n="add-to-basket">
+                Add to Basket
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="product-card p-3">
+              <img
+                src="products/product_mini2.jpg"
+                alt="Honey Jar"
+                class="img-fluid rounded mb-2"
+              />
+              <h5 data-i18n="prod3-title">Creamed Honey</h5>
+              <p data-i18n="prod3-desc">Spreadable, smooth honey delight.</p>
+              <button class="btn btn-success" data-i18n="add-to-basket">
+                Add to Basket
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="product-card p-3">
+              <img
+                src="products/product_min i.jpg"
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
@@ -182,14 +211,43 @@
         <h3 data-i18n="gallery">Gallery</h3>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <img src="hive1.jpg" class="gallery-img" alt="Hive" />
-          </div>
-          <div class="col-md-4 mb-4">
-            <img src="how_is_made.jpg" class="gallery-img" alt="Making Honey" />
+            <img
+              src="gallery/how_is_made7.jpg"
+              class="gallery-img"
+              alt="Hive"
+            />
           </div>
           <div class="col-md-4 mb-4">
             <img
-              src="how_is_made2.jpg"
+              src="gallery/how_is_made5.jpg"
+              class="gallery-img"
+              alt="Hive"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="gallery/how_is_made8.jpg"
+              class="gallery-img"
+              alt="Hive"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="gallery/how_is_made0.jpg"
+              class="gallery-img"
+              alt="Hive"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="gallery/how_is_made4.jpg"
+              class="gallery-img"
+              alt="Making Honey"
+            />
+          </div>
+          <div class="col-md-4 mb-4">
+            <img
+              src="gallery/how_is_made3.jpg"
               class="gallery-img"
               alt="More Honey Work"
             />
@@ -254,4 +312,3 @@
     </script>
   </body>
 </html>
-
