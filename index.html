@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oni's Honig</title>
+    <meta
+      name="description"
+      content="Oni's Honey - Pure, local and delicious honey from sustainable beekeeping."
+    />
+    <meta
+      name="keywords"
+      content="Honey, Natural Honey, Beekeeping, Oni's Honig, Local Honey, Pure Honey"
+    />
+    <meta name="author" content="Oni" />
+    <link rel="icon" type="image/png" href="logo.jpg" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,12 +31,16 @@
         background-image: url("wall4.jpg");
         background-size: cover;
         background-attachment: fixed;
-
+        background-position: center;
+        background-repeat: no-repeat;
         color: #222;
         overflow-x: hidden;
         border: 10px solid;
         border-image: linear-gradient(to right, #f6d365, #fda085) 1;
         box-sizing: border-box;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
       }
       header {
         background: linear-gradient(
@@ -34,31 +48,11 @@
           rgba(246, 211, 101, 0.4) 0%,
           rgba(253, 201, 133, 0.9) 100%
         );
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         text-align: center;
-        color: #fff;
+        color: #333;
         border-bottom: 4px solid #ffc107;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        animation: fadeInDown 1s ease-out;
-      }
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      nav a {
-        margin: 0 12px;
-        color: #fff;
-        font-weight: 600;
-        text-decoration: none;
-      }
-      nav a:hover {
-        text-decoration: underline;
       }
       .logo {
         max-height: 130px;
@@ -70,26 +64,6 @@
       }
       .logo:hover {
         transform: rotate(5deg) scale(1.05);
-      }
-      main {
-        background: linear-gradient(
-          135deg,
-          rgba(246, 211, 101, 0.4) 0%,
-          rgba(253, 201, 133, 0.9) 100%
-        );
-        border-radius: 1rem;
-        padding: 2rem;
-        margin-top: 2rem;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 1.5s ease;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
       }
       .product-card {
         background: linear-gradient(
@@ -125,45 +99,27 @@
         );
         text-align: center;
         padding: 1.5rem;
-        color: #fff;
+        color: #333;
         font-weight: 500;
+        border-top: 4px solid #ffc107;
+        position: relative;
       }
       .lang-switch {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
-      section h3 {
-        background: linear-gradient(
-          135deg,
-          rgba(255, 218, 8, 0.961) 0%,
-          rgb(255, 145, 0) 100%
-        );
-        padding: 0.75rem 1rem;
-        border-left: 6px solid #ff9800;
-        border-radius: 0.25rem;
-        font-weight: 700;
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
-      }
-      button.btn-success {
-        background: linear-gradient(to right, #a8e063, #56ab2f);
-        border: none;
-      }
-      button.btn-warning {
-        background: linear-gradient(to right, #ffd54f, #ffb300);
-        border: none;
+        margin-top: 1rem;
+        width: 120px;
+        display: inline-block;
       }
     </style>
   </head>
   <body>
     <header>
       <img src="logo.jpg" alt="Logo" class="logo" />
-      <h1>Oni's Honey</h1>
-      <p>Pure. Local. Delicious.</p>
+      <h1 data-i18n="title">Oni's Honey</h1>
+      <p data-i18n="subtitle">Pure. Local. Delicious.</p>
     </header>
     <main class="container py-4">
       <section>
-        <h3>My Products</h3>
+        <h3 data-i18n="products">My Products</h3>
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="product-card p-3">
@@ -172,9 +128,11 @@
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
-              <h5>Classic Honey</h5>
-              <p>250g of pure golden honey.</p>
-              <button class="btn btn-success">Add to Basket</button>
+              <h5 data-i18n="prod1-title">Classic Honey</h5>
+              <p data-i18n="prod1-desc">250g of pure golden honey.</p>
+              <button class="btn btn-success" data-i18n="add-to-basket">
+                Add to Basket
+              </button>
             </div>
           </div>
           <div class="col-md-4 mb-4">
@@ -184,9 +142,11 @@
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
-              <h5>Wildflower Blend</h5>
-              <p>Raw, unfiltered wildflower honey.</p>
-              <button class="btn btn-success">Add to Basket</button>
+              <h5 data-i18n="prod2-title">Wildflower Blend</h5>
+              <p data-i18n="prod2-desc">Raw, unfiltered wildflower honey.</p>
+              <button class="btn btn-success" data-i18n="add-to-basket">
+                Add to Basket
+              </button>
             </div>
           </div>
           <div class="col-md-4 mb-4">
@@ -196,15 +156,17 @@
                 alt="Honey Jar"
                 class="img-fluid rounded mb-2"
               />
-              <h5>Creamed Honey</h5>
-              <p>Spreadable, smooth honey delight.</p>
-              <button class="btn btn-success">Add to Basket</button>
+              <h5 data-i18n="prod3-title">Creamed Honey</h5>
+              <p data-i18n="prod3-desc">Spreadable, smooth honey delight.</p>
+              <button class="btn btn-success" data-i18n="add-to-basket">
+                Add to Basket
+              </button>
             </div>
           </div>
         </div>
       </section>
       <section class="mt-5">
-        <h3>Gallery</h3>
+        <h3 data-i18n="gallery">Gallery</h3>
         <div class="row">
           <div class="col-md-4 mb-4">
             <img src="hive1.jpg" class="gallery-img" alt="Hive" />
@@ -224,6 +186,59 @@
     </main>
     <footer>
       <p>&copy; 2025 Oni's Honig. All rights reserved.</p>
+      <select id="langSwitcher" class="form-select form-select-sm lang-switch">
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
     </footer>
+    <script>
+      const translations = {
+        de: {
+          title: "Oni's Honig",
+          subtitle: "Rein. Lokal. Köstlich.",
+          products: "Meine Produkte",
+          "prod1-title": "Klassischer Honig",
+          "prod1-desc": "250g reiner goldener Honig.",
+          "prod2-title": "Wildblumen Mischung",
+          "prod2-desc": "Roh, ungefilterter Wildblumenhonig.",
+          "prod3-title": "Cremiger Honig",
+          "prod3-desc": "Streichzarter, cremiger Honiggenuss.",
+          "add-to-basket": "In den Korb",
+          gallery: "Galerie",
+        },
+        en: {
+          title: "Oni's Honey",
+          subtitle: "Pure. Local. Delicious.",
+          products: "My Products",
+          "prod1-title": "Classic Honey",
+          "prod1-desc": "250g of pure golden honey.",
+          "prod2-title": "Wildflower Blend",
+          "prod2-desc": "Raw, unfiltered wildflower honey.",
+          "prod3-title": "Creamed Honey",
+          "prod3-desc": "Spreadable, smooth honey delight.",
+          "add-to-basket": "Add to Basket",
+          gallery: "Gallery",
+        },
+      };
+
+      const switchLanguage = (lang) => {
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+      };
+
+      document
+        .getElementById("langSwitcher")
+        .addEventListener("change", (e) => {
+          switchLanguage(e.target.value);
+        });
+
+      // Set default language to German
+      switchLanguage("de");
+    </script>
   </body>
 </html>
+
